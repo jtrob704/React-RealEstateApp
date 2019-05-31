@@ -1,9 +1,9 @@
-import React, { Component} from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Header from './Header.js'
 
 class App extends Component {
-  constructor () {
+  constructor() {
     super()
     this.state = {
       name: 'Joe'
@@ -12,8 +12,10 @@ class App extends Component {
   clickedBtn = () => {
     console.log('swag')
   }
-  render () {
-    return (<div> <Header /> </div>)
+  render() {
+    return (<div>
+      <Header />
+    </div>)
   }
 }
 

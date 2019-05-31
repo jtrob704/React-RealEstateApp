@@ -50,9 +50,37 @@ var Header = function (_Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
+        'header',
         null,
-        ' Real Estate '
+        _react2.default.createElement(
+          'div',
+          { className: 'logo' },
+          'Logo'
+        ),
+        _react2.default.createElement(
+          'nav',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: '#' },
+            'Create Ads'
+          ),
+          _react2.default.createElement(
+            'a',
+            { href: '#' },
+            'About Us'
+          ),
+          _react2.default.createElement(
+            'a',
+            { href: '#' },
+            'Log In'
+          ),
+          _react2.default.createElement(
+            'a',
+            { href: '#', className: 'register-btn' },
+            'Register'
+          )
+        )
       );
     }
   }]);
@@ -116,7 +144,7 @@ var App = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        ' Real Estate '
+        _react2.default.createElement(_Header2.default, null)
       );
     }
   }]);

@@ -1,17 +1,18 @@
 # React RealEstateApp
-This project is a react app for real estate listings.
 
- **Install all the node packages** 
-On the root of this project run on your terminal (if you want you can do this with yarn but thats optional)
-    
+This project is a React app for real estate listings.
+
+ **Install all the node packages**
+On the root of this project run on your terminal
+
     npm install
-    
- **Update the node packages** 
-On the root of this project run on your terminal (if you want you can do this with yarn but thats optional)
-    
+
+ **Update the node packages**
+On the root of this project run on your terminal
+
     npm update
 
+ **Start the server**
+On the root of this project run on your terminal
 
-**Start the server**
-
-  npm run watch
+    npm run watch

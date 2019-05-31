@@ -1,8 +1,8 @@
-import React, { Component} from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
 export default class Header extends Component {
-  constructor () {
+  constructor() {
     super()
     this.state = {
       name: 'Joe'
@@ -11,7 +11,15 @@ export default class Header extends Component {
   clickedBtn = () => {
     console.log('swag')
   }
-  render () {
-    return (<div> Real Estate </div>)
+  render() {
+    return (<header>
+      <div className="logo">Logo</div>
+      <nav>
+        <a href="#">Create Ads</a>
+        <a href="#">About Us</a>
+        <a href="#">Log In</a>
+        <a href="#" className="register-btn">Register</a>
+      </nav>
+    </header>)
   }
 }
