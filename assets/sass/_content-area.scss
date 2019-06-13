@@ -1,0 +1,57 @@
+#filter {
+    background: $grey;
+    width: 30%;
+    max-width: 300px;
+
+    h4 {
+        margin-bottom: 25px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .inside {
+        padding: 20px;
+    }    
+
+    select {
+        background: transparent;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #1b1b1b;
+        display: block;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .filters {
+        .title {
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 1rem;
+            color: darkgrey;
+        }
+
+        input[type="text"] {
+            border-radius: 5px;
+            font-size: 1rem;
+            padding: 0.4rem;
+            width: 45%;
+            display: inline-block;
+            margin-right: 2.5%;
+            margin-bottom: 1rem;
+        }
+
+        &.extras {
+            label {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                input[type="checkbox"] {
+                    float: right;
+                }
+            }
+        }
+    }
+}
