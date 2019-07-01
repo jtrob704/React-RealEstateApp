@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(59);
+var _react = __webpack_require__(47);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -178,7 +178,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(59);
+var _react = __webpack_require__(47);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -266,9 +266,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(59);
+var _react = __webpack_require__(47);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactFontawesome = __webpack_require__(239);
+
+var _freeSolidSvgIcons = __webpack_require__(238);
+
+var _freeRegularSvgIcons = __webpack_require__(237);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -302,7 +308,178 @@ var Listings = function (_Component) {
       return _react2.default.createElement(
         'section',
         { className: 'listings' },
-        'Listings'
+        _react2.default.createElement(
+          'section',
+          { className: 'search-area' },
+          _react2.default.createElement('input', { type: 'text', name: 'search' })
+        ),
+        _react2.default.createElement(
+          'section',
+          { className: 'sortby-area' },
+          _react2.default.createElement(
+            'div',
+            null,
+            '390 results found'
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'sort-options' },
+            _react2.default.createElement(
+              'select',
+              { name: 'sortby', className: 'sortby' },
+              _react2.default.createElement(
+                'option',
+                { value: 'price-asc' },
+                'Highest Price'
+              ),
+              _react2.default.createElement(
+                'option',
+                { value: 'price-dsc' },
+                'Lowest Price'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'view' },
+              _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faList }),
+              _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faTh })
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'section',
+          { className: 'listings-results' },
+          _react2.default.createElement(
+            'div',
+            { className: 'listing' },
+            _react2.default.createElement(
+              'div',
+              { className: 'listing-img' },
+              _react2.default.createElement(
+                'span',
+                { className: 'address' },
+                'Address'
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'details' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'user-img' },
+                  ' '
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'user-details' },
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'user-name' },
+                    'Martha Smith'
+                  ),
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'post-date' },
+                    '06/30/2019'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'listing-details' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'floor-space' },
+                    _react2.default.createElement(
+                      'i',
+                      { className: 'square' },
+                      _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeRegularSvgIcons.faSquare })
+                    ),
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      '1000 ft\xB2'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'bedrooms' },
+                    _react2.default.createElement(
+                      'i',
+                      { className: 'bed' },
+                      _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faBed })
+                    ),
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      '3 Bedrooms'
+                    )
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'bottom-info' },
+              _react2.default.createElement(
+                'span',
+                null,
+                '$1200 / month'
+              ),
+              _react2.default.createElement(
+                'span',
+                null,
+                _react2.default.createElement(
+                  'i',
+                  { className: 'mapMarker' },
+                  _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faMapMarkerAlt })
+                ),
+                ' Charlotte, NC '
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'section',
+          { className: 'pagination' },
+          _react2.default.createElement(
+            'ul',
+            { className: 'page-no' },
+            _react2.default.createElement(
+              'li',
+              null,
+              'Prev'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '1'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '2'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '3'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '4'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '5'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Next'
+            )
+          )
+        )
       );
     }
   }]);
@@ -314,7 +491,7 @@ exports.default = Listings;
 
 /***/ }),
 
-/***/ 236:
+/***/ 240:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -322,7 +499,7 @@ exports.default = Listings;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(59);
+var _react = __webpack_require__(47);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -394,4 +571,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), app);
 
 /***/ })
 
-},[236]);
+},[240]);
