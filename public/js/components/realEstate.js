@@ -307,7 +307,7 @@ var Listings = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'section',
-        { className: 'listings' },
+        { id: 'listings' },
         _react2.default.createElement(
           'section',
           { className: 'search-area' },
@@ -318,7 +318,7 @@ var Listings = function (_Component) {
           { className: 'sortby-area' },
           _react2.default.createElement(
             'div',
-            null,
+            { className: 'results' },
             '390 results found'
           ),
           _react2.default.createElement(
@@ -341,8 +341,8 @@ var Listings = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'view' },
-              _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faList }),
-              _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faTh })
+              _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faList, className: 'fa' }),
+              _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faTh, className: 'fa' })
             )
           )
         ),

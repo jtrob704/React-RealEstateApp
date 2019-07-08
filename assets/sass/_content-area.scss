@@ -1,7 +1,8 @@
 #filter {
     background: $grey;
     width: 30%;
-    max-width: 300px;
+    max-width: 300px;    
+    float: left;
 
     h4 {
         margin-bottom: 25px;
@@ -30,7 +31,7 @@
             font-size: 0.9rem;
             display: block;
             margin-bottom: 1rem;
-            color: darkgrey;
+            color: $darkgrey;
         }
 
         input[type="text"] {
@@ -57,5 +58,51 @@
 }
 
 #listings {
+    width: 70%;
+    float: left;
+    padding: 15px;
+    background: $offwhite;
 
+    .search-area {
+        input[type="text"] {
+            width: 70%;
+            background: transparent;
+            font-size: 2rem;
+            border: none;
+            border-bottom: 2px solid $lightgrey;
+            margin-bottom: 20px;
+            color: $lightgrey;
+        }
+    }  
+    .sortby-area {
+        margin-bottom: 20px;
+
+        .results {
+            color: $lightgrey;
+            font-size: 0.8rem;
+            display: inline-block;
+        }
+
+        .sort-options {
+            float: right;
+
+            select {
+                font-size: 0.9rem;
+                font-weight: 300;
+                border: 1px solid $lightgrey;
+                background: transparent;
+                margin: 20px 15px 20px 20px;                
+                display: inline-block;                                      
+            }
+
+            .view {
+                display: inline-block;
+
+                .fa {
+                    font-size: 1.5rem;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }  
 }
