@@ -1,7 +1,12 @@
+.content-area {
+    overflow: auto;
+    width: 100%;
+}
+
 #filter {
     background: $grey;
     width: 30%;
-    max-width: 300px;    
+    max-width: 300px;
     float: left;
 
     h4 {
@@ -13,7 +18,7 @@
 
     .inside {
         padding: 20px;
-    }    
+    }
 
     select {
         background: transparent;
@@ -49,6 +54,7 @@
                 display: block;
                 width: 100%;
                 padding: 10px;
+
                 input[type="checkbox"] {
                     float: right;
                 }
@@ -73,7 +79,8 @@
             margin-bottom: 20px;
             color: $lightgrey;
         }
-    }  
+    }
+
     .sortby-area {
         margin-bottom: 20px;
 
@@ -91,8 +98,8 @@
                 font-weight: 300;
                 border: 1px solid $lightgrey;
                 background: transparent;
-                margin: 20px 15px 20px 20px;                
-                display: inline-block;                                      
+                margin: 20px 15px 20px 20px;
+                display: inline-block;
             }
 
             .view {
@@ -104,5 +111,52 @@
                 }
             }
         }
-    }  
+    }
+
+    .listings-results {
+        margin-bottom: 60px;
+
+        .listing {
+            background: #fff;
+            width: 33.33%;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 9px 54px -4px rgba(224, 224, 224, 1);
+            -moz-box-shadow: 0px 9px 54px -4px rgba(224, 224, 224, 1);
+            box-shadow: 0px 9px 54px -4px rgba(224, 224, 224, 1);
+        }
+
+        .listing-img {
+            color: white;
+            padding: 15px;
+            position: relative;
+            background: url(https://www.sinaarchitecturaldesign.com/wp-content/uploads/2017/09/modern-house-architectural-design-sina.jpg) no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            min-height: 200px;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .details {
+            position: absolute;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4130f4+0,a32ded+50,bc75d8+100 */
+            background: rgba(65, 48, 244, .8);
+            /* Old browsers */
+            background: -moz-linear-gradient(-45deg, rgba(65, 48, 244, .8) 0%, rgba(163, 45, 237, 1) 50%, rgba(188, 117, 216, 1) 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(-45deg, rgba(65, 48, 244, .8) 0%, rgba(163, 45, 237, 1) 50%, rgba(188, 117, 216, 1) 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(135deg, rgba(65, 48, 244, .8) 0%, rgba(163, 45, 237, 1) 50%, rgba(188, 117, 216, 1) 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4130f4', endColorstr='#bc75d8', GradientType=1);
+            /* IE6-9 fallback on horizontal gradient */
+
+        }
+    }
 }
