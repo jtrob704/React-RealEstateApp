@@ -358,60 +358,73 @@ var Listings = function (_Component) {
               _react2.default.createElement(
                 'span',
                 { className: 'address' },
-                'Address'
+                '768  Wilkinson Street'
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'details' },
                 _react2.default.createElement(
                   'div',
-                  { className: 'user-img' },
-                  ' '
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'user-details' },
+                  { className: 'col-md-3' },
                   _react2.default.createElement(
-                    'span',
-                    { className: 'user-name' },
-                    'Martha Smith'
-                  ),
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'post-date' },
-                    '06/30/2019'
+                    'div',
+                    { className: 'user-img' },
+                    ' '
                   )
                 ),
                 _react2.default.createElement(
                   'div',
-                  { className: 'listing-details' },
+                  { className: 'col-md-9' },
                   _react2.default.createElement(
                     'div',
-                    { className: 'floor-space' },
+                    { className: 'user-details' },
                     _react2.default.createElement(
-                      'i',
-                      { className: 'square' },
-                      _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeRegularSvgIcons.faSquare })
+                      'span',
+                      { className: 'user-name' },
+                      'Martha Smith'
                     ),
                     _react2.default.createElement(
                       'span',
-                      null,
-                      '1000 ft\xB2'
+                      { className: 'post-date' },
+                      '06/30/2019'
                     )
                   ),
                   _react2.default.createElement(
                     'div',
-                    { className: 'bedrooms' },
+                    { className: 'listing-details' },
                     _react2.default.createElement(
-                      'i',
-                      { className: 'bed' },
-                      _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faBed })
+                      'div',
+                      { className: 'floor-space' },
+                      _react2.default.createElement(
+                        'i',
+                        { className: 'fa square' },
+                        _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeRegularSvgIcons.faSquare })
+                      ),
+                      _react2.default.createElement(
+                        'span',
+                        null,
+                        '1000 ft\xB2'
+                      )
                     ),
                     _react2.default.createElement(
-                      'span',
-                      null,
-                      '3 Bedrooms'
+                      'div',
+                      { className: 'bedrooms' },
+                      _react2.default.createElement(
+                        'i',
+                        { className: 'fa bed' },
+                        _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faBed })
+                      ),
+                      _react2.default.createElement(
+                        'span',
+                        null,
+                        '3 Bedrooms'
+                      )
                     )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'view-btn' },
+                    'View Listing'
                   )
                 )
               )

@@ -129,7 +129,7 @@
             color: white;
             padding: 15px;
             position: relative;
-            background: url(https://www.sinaarchitecturaldesign.com/wp-content/uploads/2017/09/modern-house-architectural-design-sina.jpg) no-repeat center center;
+            background: url(http://cdn.home-designing.com/wp-content/uploads/2015/03/cool-modern-home.jpg) no-repeat center center;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -141,22 +141,136 @@
             -moz-border-radius-topright: 5px;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
+
+            &:hover {
+                .details {
+                    opacity: 1;
+                }
+
+                .address {
+                    opacity: 0;
+                }
+            }
+
+            .address {
+                opacity: 1;
+                position: absolute;
+                bottom: 20px;
+                transition: all 0.3s ease-in-out;
+            }
         }
 
         .details {
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            padding: 20px;
             position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
             /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4130f4+0,a32ded+50,bc75d8+100 */
             background: rgba(65, 48, 244, .8);
             /* Old browsers */
-            background: -moz-linear-gradient(-45deg, rgba(65, 48, 244, .8) 0%, rgba(163, 45, 237, 1) 50%, rgba(188, 117, 216, 1) 100%);
+            background: -moz-linear-gradient(-45deg, rgba(65, 48, 244, .8) 0%, rgba(163, 45, 237, .8) 50%, rgba(188, 117, 216, .8) 100%);
             /* FF3.6-15 */
-            background: -webkit-linear-gradient(-45deg, rgba(65, 48, 244, .8) 0%, rgba(163, 45, 237, 1) 50%, rgba(188, 117, 216, 1) 100%);
+            background: -webkit-linear-gradient(-45deg, rgba(65, 48, 244, .8) 0%, rgba(163, 45, 237, .8) 50%, rgba(188, 117, 216, .8) 100%);
             /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(135deg, rgba(65, 48, 244, .8) 0%, rgba(163, 45, 237, 1) 50%, rgba(188, 117, 216, 1) 100%);
+            background: linear-gradient(135deg, rgba(65, 48, 244, .8) 0%, rgba(163, 45, 237, .8) 50%, rgba(188, 117, 216, .8) 100%);
             /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4130f4', endColorstr='#bc75d8', GradientType=1);
-            /* IE6-9 fallback on horizontal gradient */
 
+            /* IE6-9 fallback on horizontal gradient */
+            .user-img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 2px solid white;
+                display: inline-block;
+                background: url(https://media.gettyimages.com/photos/horizontal-headshot-of-an-attractive-african-american-business-woman-picture-id514623738?b=1&k=6&m=514623738&s=612x612&w=0&h=FU8a9P-3mWYOM4X1YZIOigYXU8YhSMMrJkRp2D-31Sg=) no-repeat center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+
+            .user-details {
+                vertical-align: top;
+                display: inline-block;
+
+                .user-name {
+                    font-weight: 300;
+                    font-size: 0.9rem;
+                    display: block;
+                    color: rgba(255, 255, 255, 1);
+                    margin-top: 3px;
+                    margin-bottom: 5px;
+                }
+
+                .post-date {
+                    font-size: 0.9rem;
+                    display: block;
+                    color: rgba(255, 255, 255, 0.7);
+                }
+            }
+
+            .listing-details {
+                margin-top: 20px;
+
+                .fa {
+                    display: inline-block;
+                    font-size: 20px;
+                    margin-right: 15px;
+                }
+
+                span {
+                    font-weight: 300;
+                    font-size: 0.8rem;
+                    display: inline-block;
+                    vertical-align: top;
+                    position: relative;
+                    top: 3px;
+                }
+
+                .floor-space {
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
+}
+
+.view-btn {
+    background: $offwhite;
+    color: $darkpurple;
+    padding: 10px;
+    max-width: 150px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+        background: $pink;
+        color: $offwhite;
+        cursor: pointer;
+    }
+}
+
+.col-md-3 {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.col-md-9 {
+    widows: 75%;
+    display: inline-block;
 }
