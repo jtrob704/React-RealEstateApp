@@ -455,7 +455,7 @@ var Listings = function (_Component) {
           { className: 'pagination' },
           _react2.default.createElement(
             'ul',
-            { className: 'page-no' },
+            { className: 'pages' },
             _react2.default.createElement(
               'li',
               null,
@@ -463,7 +463,7 @@ var Listings = function (_Component) {
             ),
             _react2.default.createElement(
               'li',
-              null,
+              { className: 'active' },
               '1'
             ),
             _react2.default.createElement(

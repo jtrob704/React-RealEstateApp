@@ -100,7 +100,7 @@
                 font-size: 0.9rem;
                 font-weight: 300;
                 border: 1px solid $lightgrey;
-                background: transparent;                
+                background: transparent;
                 display: inline-block;
                 margin-right: 15px;
                 vertical-align: top;
@@ -121,8 +121,8 @@
         margin-bottom: 60px;
 
         .listing {
-            background: #fff;  
-            width: 25%;                    
+            background: #fff;
+            width: 25%;
             border-radius: 5px;
             -webkit-box-shadow: 0px 9px 54px -4px rgba(224, 224, 224, 1);
             -moz-box-shadow: 0px 9px 54px -4px rgba(224, 224, 224, 1);
@@ -247,15 +247,18 @@
                 }
             }
         }
+
         .bottom-info {
             padding: 20px 15px;
+
             .price {
                 color: $darkgrey;
-                font-size:1rem;
+                font-size: 1rem;
                 font-weight: 500;
                 display: block;
                 margin-bottom: 10px;
             }
+
             .location {
                 color: $lightgrey;
                 font-size: 1.2rem;
@@ -280,6 +283,31 @@
         background: $pink;
         color: $offwhite;
         cursor: pointer;
+    }
+}
+
+.pagination {
+    text-align: center;
+
+    .pages {
+        background: white;
+        display: inline-block;        
+        -webkit-box-shadow: 0px 9px 54px -4px rgba(224, 224, 224, 1);
+        -moz-box-shadow: 0px 9px 54px -4px rgba(224, 224, 224, 1);
+        box-shadow: 0px 9px 54px -4px rgba(224, 224, 224, 1);
+
+        li {
+            padding: 20px 30px;
+            display: inline-block;
+
+            &.active,
+            &:hover {
+                color: white;
+                font-weight: 700;
+                background: $pink;
+                cursor: pointer;
+            }
+        }
     }
 }
 
