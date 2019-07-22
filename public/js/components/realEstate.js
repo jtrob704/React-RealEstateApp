@@ -434,15 +434,15 @@ var Listings = function (_Component) {
               { className: 'bottom-info' },
               _react2.default.createElement(
                 'span',
-                null,
+                { className: 'price' },
                 '$1200 / month'
               ),
               _react2.default.createElement(
                 'span',
-                null,
+                { className: 'location' },
                 _react2.default.createElement(
                   'i',
-                  { className: 'mapMarker' },
+                  null,
                   _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faMapMarkerAlt })
                 ),
                 ' Charlotte, NC '

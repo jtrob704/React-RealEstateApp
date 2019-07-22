@@ -64,12 +64,13 @@ export default class Listings extends Component {
             </div>
           </div>
           <div className="bottom-info">
-            <span>$1200 / month</span>
-            <span><i className="mapMarker"><FontAwesomeIcon icon={faMapMarkerAlt} /></i> Charlotte, NC </span>
-
+            <span className="price">$1200 / month</span>
+            <span className="location"><i><FontAwesomeIcon icon={faMapMarkerAlt} /></i> Charlotte, NC </span>
           </div>
-        </div>
+          </div>
       </section>
+
+      
 
       <section className="pagination">
         <ul className="page-no">
