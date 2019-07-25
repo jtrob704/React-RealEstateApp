@@ -1,6 +1,81 @@
 webpackJsonp([0],{
 
-/***/ 230:
+/***/ 151:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var listingsData = [{
+    address: '3530  Saint Francis Way',
+    city: 'Charlotte',
+    state: 'NC',
+    rooms: 3,
+    price: 180000,
+    floorspace: 2200,
+    extras: ['elevator', 'gym'],
+    hometype: 'Condominium',
+    image: 'https://assets.dnainfo.com/photo/2017/5/1495581226-299792/larger.jpg'
+}, {
+    address: '2348  Nixon Avenue',
+    city: 'Charlotte',
+    state: 'NC',
+    rooms: 2,
+    price: 140000,
+    floorspace: 1800,
+    extras: ['elevator', 'swimming pool', 'gym'],
+    hometype: 'Condominium',
+    image: 'https://www.amli.com/AMLIcontent/files/apartments/dallas/escena/amenity-exterior/escena-amenity-exterior-building-exterior-2_B.jpg?w=320&h=237'
+}, {
+    address: '768  Wilkinson Street',
+    city: 'Huntersville',
+    state: 'NC',
+    rooms: 4,
+    price: 280000,
+    floorspace: 3200,
+    extras: ['swimming pool', 'finished basement'],
+    hometype: 'Single-family home',
+    image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/brewster-mcleod-architects-1486154143.jpg?crop=1xw:1xh;center,top&resize=480:*'
+}, {
+    address: '3859  Walt Nuzum Farm Road',
+    city: 'Knoxville',
+    state: 'TN',
+    rooms: 3,
+    price: 150000,
+    floorspace: 1800,
+    extras: ['finished basement', 'gym'],
+    hometype: 'Single-family home',
+    image: 'https://ap.rdcpix.com/462642208/ddcf38d12e7d148a3cc0f20a189b7f68l-m0xd-w480_h480_q80.jpg'
+}, {
+    address: '4625  Kincheloe Road',
+    city: 'Hampton',
+    state: 'VA',
+    rooms: 4,
+    price: 210000,
+    floorspace: 1800,
+    extras: ['elevator', 'swimming pool', 'gym'],
+    hometype: 'Townhome',
+    image: 'https://i.pinimg.com/736x/da/95/01/da9501057f20f97a2594f61d382bbd51--luxury-townhomes-brick-facade.jpg'
+}, {
+    address: '3302  Christie Way',
+    city: 'Rock Hill',
+    state: 'SC',
+    rooms: 2,
+    price: 140000,
+    floorspace: 1600,
+    extras: ['finished basement'],
+    hometype: 'Townhome',
+    image: 'https://ap.rdcpix.com/1300778947/707abb9bbff253667c53d5de726f4b06l-m0xd-w480_h480_q80.jpg'
+}];
+
+exports.default = listingsData;
+
+/***/ }),
+
+/***/ 231:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -166,7 +241,7 @@ exports.default = Filter;
 
 /***/ }),
 
-/***/ 231:
+/***/ 232:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -254,7 +329,7 @@ exports.default = Header;
 
 /***/ }),
 
-/***/ 232:
+/***/ 233:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -276,6 +351,10 @@ var _freeSolidSvgIcons = __webpack_require__(239);
 
 var _freeRegularSvgIcons = __webpack_require__(238);
 
+var _listingsData = __webpack_require__(151);
+
+var _listingsData2 = _interopRequireDefault(_listingsData);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -292,17 +371,134 @@ var Listings = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Listings.__proto__ || Object.getPrototypeOf(Listings)).call(this));
 
-    _this.clickedBtn = function () {
-      console.log('swag');
-    };
-
     _this.state = {
       name: 'Joe'
     };
+    _this.loopListings = _this.loopListings.bind(_this);
     return _this;
   }
 
   _createClass(Listings, [{
+    key: 'loopListings',
+    value: function loopListings() {
+      var listingsData = this.props.listingsData;
+
+
+      return listingsData.map(function (listing, index) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'col-md-3', key: index },
+          _react2.default.createElement(
+            'div',
+            { className: 'listing' },
+            _react2.default.createElement(
+              'div',
+              { className: 'listing-img', style: { background: 'url(' + listing.image + ') no-repeat center center' } },
+              _react2.default.createElement(
+                'span',
+                { className: 'address' },
+                listing.address
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'details' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col-md-3' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'user-img' },
+                    ' '
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col-md-9' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'user-details' },
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'user-name' },
+                      'Martha Smith'
+                    ),
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'post-date' },
+                      '06/30/2019'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'listing-details' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'floor-space' },
+                      _react2.default.createElement(
+                        'i',
+                        { className: 'fa square' },
+                        _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeRegularSvgIcons.faSquare })
+                      ),
+                      _react2.default.createElement(
+                        'span',
+                        null,
+                        listing.floorspace,
+                        ' ft\xB2'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'bedrooms' },
+                      _react2.default.createElement(
+                        'i',
+                        { className: 'fa bed' },
+                        _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faBed })
+                      ),
+                      _react2.default.createElement(
+                        'span',
+                        null,
+                        listing.rooms,
+                        ' Bedrooms'
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'view-btn' },
+                    'View Listing'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'bottom-info' },
+              _react2.default.createElement(
+                'span',
+                { className: 'price' },
+                '$',
+                listing.price
+              ),
+              _react2.default.createElement(
+                'span',
+                { className: 'location' },
+                _react2.default.createElement(
+                  'i',
+                  null,
+                  _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faMapMarkerAlt })
+                ),
+                ' ',
+                listing.city,
+                ', ',
+                listing.state,
+                ' '
+              )
+            )
+          )
+        );
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -349,106 +545,7 @@ var Listings = function (_Component) {
         _react2.default.createElement(
           'section',
           { className: 'listings-results' },
-          _react2.default.createElement(
-            'div',
-            { className: 'listing' },
-            _react2.default.createElement(
-              'div',
-              { className: 'listing-img' },
-              _react2.default.createElement(
-                'span',
-                { className: 'address' },
-                '768  Wilkinson Street'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'details' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col-md-3' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'user-img' },
-                    ' '
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col-md-9' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'user-details' },
-                    _react2.default.createElement(
-                      'span',
-                      { className: 'user-name' },
-                      'Martha Smith'
-                    ),
-                    _react2.default.createElement(
-                      'span',
-                      { className: 'post-date' },
-                      '06/30/2019'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'listing-details' },
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'floor-space' },
-                      _react2.default.createElement(
-                        'i',
-                        { className: 'fa square' },
-                        _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeRegularSvgIcons.faSquare })
-                      ),
-                      _react2.default.createElement(
-                        'span',
-                        null,
-                        '1000 ft\xB2'
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'bedrooms' },
-                      _react2.default.createElement(
-                        'i',
-                        { className: 'fa bed' },
-                        _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faBed })
-                      ),
-                      _react2.default.createElement(
-                        'span',
-                        null,
-                        '3 Bedrooms'
-                      )
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'view-btn' },
-                    'View Listing'
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'bottom-info' },
-              _react2.default.createElement(
-                'span',
-                { className: 'price' },
-                '$1200 / month'
-              ),
-              _react2.default.createElement(
-                'span',
-                { className: 'location' },
-                _react2.default.createElement(
-                  'i',
-                  null,
-                  _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: _freeSolidSvgIcons.faMapMarkerAlt })
-                ),
-                ' Charlotte, NC '
-              )
-            )
-          )
+          this.loopListings()
         ),
         _react2.default.createElement(
           'section',
@@ -504,81 +601,6 @@ exports.default = Listings;
 
 /***/ }),
 
-/***/ 233:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var listingsData = [{
-    address: '3530  Saint Francis Way',
-    city: 'Charlotte',
-    state: 'NC',
-    rooms: 3,
-    price: 1800,
-    floorspace: 2200,
-    extras: ['elevator', 'gym'],
-    hometype: 'Condominium',
-    image: 'https://assets.dnainfo.com/photo/2017/5/1495581226-299792/larger.jpg'
-}, {
-    address: '2348  Nixon Avenue',
-    city: 'Charlotte',
-    state: 'NC',
-    rooms: 2,
-    price: 1400,
-    floorspace: 1800,
-    extras: ['elevator', 'swimming pool', 'gym'],
-    hometype: 'Condominium',
-    image: 'https://www.amli.com/AMLIcontent/files/apartments/dallas/escena/amenity-exterior/escena-amenity-exterior-building-exterior-2_B.jpg?w=320&h=237'
-}, {
-    address: '768  Wilkinson Street',
-    city: 'Huntersville',
-    state: 'NC',
-    rooms: 4,
-    price: 2800,
-    floorspace: 3200,
-    extras: ['swimming pool', 'finished basement'],
-    hometype: 'Single-family home',
-    image: 'http://cdn.home-designing.com/wp-content/uploads/2015/03/cool-modern-home.jpg'
-}, {
-    address: '3859  Walt Nuzum Farm Road',
-    city: 'Knoxville',
-    state: 'TN',
-    rooms: 3,
-    price: 1500,
-    floorspace: 1800,
-    extras: ['finished basement', 'gym'],
-    hometype: 'Single-family home',
-    image: 'https://agwt.org/sites/default/files/Image%20for%20News%20article-%20Rural%20Home%20in%20NH.jpg'
-}, {
-    address: '4625  Kincheloe Road',
-    city: 'Hampton',
-    state: 'VA',
-    rooms: 4,
-    price: 2100,
-    floorspace: 1800,
-    extras: ['elevator', 'swimming pool', 'gym'],
-    hometype: 'Townhome',
-    image: 'https://i.pinimg.com/736x/da/95/01/da9501057f20f97a2594f61d382bbd51--luxury-townhomes-brick-facade.jpg'
-}, {
-    address: '3302  Christie Way',
-    city: 'Rock Hill',
-    state: 'SC',
-    rooms: 2,
-    price: 1400,
-    floorspace: 1600,
-    extras: ['finished basement'],
-    hometype: 'Townhome',
-    image: 'https://ap.rdcpix.com/1300778947/707abb9bbff253667c53d5de726f4b06l-m0xd-w480_h480_q80.jpg'
-}];
-
-exports.default = listingsData;
-
-/***/ }),
-
 /***/ 241:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -595,19 +617,19 @@ var _reactDom = __webpack_require__(101);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Header = __webpack_require__(231);
+var _Header = __webpack_require__(232);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Filter = __webpack_require__(230);
+var _Filter = __webpack_require__(231);
 
 var _Filter2 = _interopRequireDefault(_Filter);
 
-var _Listings = __webpack_require__(232);
+var _Listings = __webpack_require__(233);
 
 var _Listings2 = _interopRequireDefault(_Listings);
 
-var _listingsData = __webpack_require__(233);
+var _listingsData = __webpack_require__(151);
 
 var _listingsData2 = _interopRequireDefault(_listingsData);
 
@@ -649,7 +671,7 @@ var App = function (_Component) {
           'section',
           { id: 'content-area' },
           _react2.default.createElement(_Filter2.default, null),
-          _react2.default.createElement(_Listings2.default, null)
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.listingsData })
         )
       );
     }

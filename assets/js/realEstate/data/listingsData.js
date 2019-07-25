@@ -4,7 +4,7 @@ var listingsData = [
         city: 'Charlotte',
         state: 'NC',
         rooms: 3,
-        price: 1800,
+        price: 180000,
         floorspace: 2200,
         extras: [
             'elevator',
@@ -18,7 +18,7 @@ var listingsData = [
         city: 'Charlotte',
         state: 'NC',
         rooms: 2,
-        price: 1400,
+        price: 140000,
         floorspace: 1800,
         extras: [
             'elevator',
@@ -33,35 +33,35 @@ var listingsData = [
         city: 'Huntersville',
         state: 'NC',
         rooms: 4,
-        price: 2800,
+        price: 280000,
         floorspace: 3200,
         extras: [
             'swimming pool',
             'finished basement'
         ],
         hometype: 'Single-family home',
-        image: 'http://cdn.home-designing.com/wp-content/uploads/2015/03/cool-modern-home.jpg'
+        image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/brewster-mcleod-architects-1486154143.jpg?crop=1xw:1xh;center,top&resize=480:*'
     },
     {
         address: '3859  Walt Nuzum Farm Road',
         city: 'Knoxville',
         state: 'TN',
         rooms: 3,
-        price: 1500,
+        price: 150000,
         floorspace: 1800,
         extras: [
             'finished basement',
             'gym'
         ],
         hometype: 'Single-family home',
-        image: 'https://agwt.org/sites/default/files/Image%20for%20News%20article-%20Rural%20Home%20in%20NH.jpg'
+        image: 'https://ap.rdcpix.com/462642208/ddcf38d12e7d148a3cc0f20a189b7f68l-m0xd-w480_h480_q80.jpg'
     },
     {
         address: '4625  Kincheloe Road',
         city: 'Hampton',
         state: 'VA',
         rooms: 4,
-        price: 2100,
+        price: 210000,
         floorspace: 1800,
         extras: [
             'elevator',
@@ -76,9 +76,9 @@ var listingsData = [
         city: 'Rock Hill',
         state: 'SC',
         rooms: 2,
-        price: 1400,
+        price: 140000,
         floorspace: 1600,
-        extras: [            
+        extras: [
             'finished basement'
         ],
         hometype: 'Townhome',

@@ -122,7 +122,6 @@
 
         .listing {
             background: #fff;
-            width: 25%;
             border-radius: 5px;
             -webkit-box-shadow: 0px 9px 54px -4px rgba(224, 224, 224, 1);
             -moz-box-shadow: 0px 9px 54px -4px rgba(224, 224, 224, 1);
@@ -133,7 +132,6 @@
             color: white;
             padding: 15px;
             position: relative;
-            background: url(http://cdn.home-designing.com/wp-content/uploads/2015/03/cool-modern-home.jpg) no-repeat center center;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -157,10 +155,13 @@
             }
 
             .address {
+                font-size: 1.3rem;
+                text-transform: capitalize;
                 opacity: 1;
                 position: absolute;
                 bottom: 20px;
                 transition: all 0.3s ease-in-out;
+                text-shadow: 0px 1px 4px rgba(91, 91, 91, 1);
             }
         }
 
@@ -291,7 +292,7 @@
 
     .pages {
         background: white;
-        display: inline-block;        
+        display: inline-block;
         -webkit-box-shadow: 0px 9px 54px -4px rgba(224, 224, 224, 1);
         -moz-box-shadow: 0px 9px 54px -4px rgba(224, 224, 224, 1);
         box-shadow: 0px 9px 54px -4px rgba(224, 224, 224, 1);

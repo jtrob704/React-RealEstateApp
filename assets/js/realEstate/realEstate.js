@@ -16,12 +16,12 @@ class App extends Component {
   clickedBtn = () => {
     console.log('swag')
   }
-  render() {    
+  render() {
     return (<div>
       <Header />
       <section id="content-area">
         <Filter />
-        <Listings />
+        <Listings listingsData={this.state.listingsData} />
       </section>
     </div>)
   }
