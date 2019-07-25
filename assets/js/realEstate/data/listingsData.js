@@ -4,7 +4,7 @@ var listingsData = [
         city: 'Charlotte',
         state: 'NC',
         rooms: 3,
-        price: 180000,
+        price: 380000,
         floorspace: 2200,
         extras: [
             'elevator',
@@ -18,7 +18,7 @@ var listingsData = [
         city: 'Charlotte',
         state: 'NC',
         rooms: 2,
-        price: 140000,
+        price: 440000,
         floorspace: 1800,
         extras: [
             'elevator',
@@ -33,7 +33,7 @@ var listingsData = [
         city: 'Huntersville',
         state: 'NC',
         rooms: 4,
-        price: 280000,
+        price: 700000,
         floorspace: 3200,
         extras: [
             'swimming pool',
