@@ -10,17 +10,33 @@ class App extends Component {
     super()
     this.state = {
       name: 'Joe',
-      listingsData
+      listingsData,
+      min_price: 0,
+      max_price: 2000000,
+      min_floor_space: 0,
+      max_floor_space: 25000,
+      elevator: false,
+      finished_basement: false,
+      gym: false,
+      swimming_pool: false
     }
+    this.change = this.change.bind(this)
   }
-  clickedBtn = () => {
-    console.log('swag')
+  change(event) {
+    var name = event.target.name
+    var value = (event.target.type == 'checkbox') ? event.target.checked : event.target.value
+
+    this.setState({
+      [name]: value
+    }, () => {
+      console.log(this.state)
+    })
   }
   render() {
     return (<div>
       <Header />
       <section id="content-area">
-        <Filter />
+        <Filter change={this.change} globalState={this.state} />
         <Listings listingsData={this.state.listingsData} />
       </section>
     </div>)
