@@ -7,9 +7,6 @@ export default class Filter extends Component {
       name: 'Joe'
     }
   }
-  clickedBtn = () => {
-    console.log('swag')
-  }
   render() {
     return (<section id="filter">
       <div className="inside">
