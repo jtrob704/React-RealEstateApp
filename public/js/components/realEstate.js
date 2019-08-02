@@ -17,7 +17,7 @@ var listingsData = [{
     price: 380000,
     floorspace: 2200,
     extras: ['elevator', 'gym'],
-    hometype: 'Condominium',
+    homeType: 'Condominium',
     image: '/img/larger.jpg'
 }, {
     address: '2348  Nixon Avenue',
@@ -27,7 +27,7 @@ var listingsData = [{
     price: 440000,
     floorspace: 1800,
     extras: ['elevator', 'swimming pool', 'gym'],
-    hometype: 'Condominium',
+    homeType: 'Condominium',
     image: '/img/escena-amenity-exterior-building-exterior-2_B.jpg?w=320&h=237'
 }, {
     address: '768  Wilkinson Street',
@@ -37,7 +37,7 @@ var listingsData = [{
     price: 700000,
     floorspace: 3200,
     extras: ['swimming pool', 'finished basement'],
-    hometype: 'Single-family home',
+    homeType: 'Single-family home',
     image: '/img/brewster-mcleod-architects-1486154143.jpg?crop=1xw:1xh;center,top&resize=480:*'
 }, {
     address: '3859  Walt Nuzum Farm Road',
@@ -47,7 +47,7 @@ var listingsData = [{
     price: 150000,
     floorspace: 1800,
     extras: ['finished basement', 'gym'],
-    hometype: 'Single-family home',
+    homeType: 'Single-family home',
     image: '/img/ddcf38d12e7d148a3cc0f20a189b7f68l-m0xd-w480_h480_q80.jpg'
 }, {
     address: '4625  Kincheloe Road',
@@ -57,7 +57,7 @@ var listingsData = [{
     price: 210000,
     floorspace: 1800,
     extras: ['elevator', 'swimming pool', 'gym'],
-    hometype: 'Townhome',
+    homeType: 'Townhome',
     image: '/img/da9501057f20f97a2594f61d382bbd51--luxury-townhomes-brick-facade.jpg'
 }, {
     address: '3302  Christie Way',
@@ -67,7 +67,7 @@ var listingsData = [{
     price: 140000,
     floorspace: 1600,
     extras: ['finished basement'],
-    hometype: 'Townhome',
+    homeType: 'Townhome',
     image: '/img/707abb9bbff253667c53d5de726f4b06l-m0xd-w480_h480_q80.jpg'
 }];
 
@@ -128,35 +128,90 @@ var Filter = function (_Component) {
             'Filter'
           ),
           _react2.default.createElement(
+            'label',
+            { htmlFor: 'city' },
+            'City'
+          ),
+          _react2.default.createElement(
             'select',
-            { name: 'neighborhood', className: 'filters neighborhood', onChange: this.props.change },
+            { name: 'city', className: 'filters city', onChange: this.props.change },
             _react2.default.createElement(
               'option',
-              { value: 'Southpark' },
-              'Southpark'
+              { value: 'All' },
+              'All'
             ),
             _react2.default.createElement(
               'option',
-              { value: 'Ballantyne' },
-              'Ballantyne'
+              { value: 'Charlotte' },
+              'Charlotte'
+            ),
+            _react2.default.createElement(
+              'option',
+              { value: 'Hampton' },
+              'Hampton'
             )
           ),
           _react2.default.createElement(
-            'select',
-            { name: 'housetype', className: 'filters housetype', onChange: this.props.change },
-            _react2.default.createElement(
-              'option',
-              null,
-              'Ranch'
-            )
+            'label',
+            { htmlFor: 'homeType' },
+            'Home Type'
           ),
           _react2.default.createElement(
             'select',
-            { name: 'bedrooms', className: 'filters bedrooms', onChange: this.props.change },
+            { name: 'homeType', className: 'filters homeType', onChange: this.props.change },
             _react2.default.createElement(
               'option',
-              null,
-              '2 Bedrooms'
+              { value: 'All' },
+              'All'
+            ),
+            _react2.default.createElement(
+              'option',
+              { value: 'Single-family home' },
+              'Single-family home'
+            ),
+            _react2.default.createElement(
+              'option',
+              { value: 'Townhome' },
+              'Townhome'
+            ),
+            _react2.default.createElement(
+              'option',
+              { value: 'Condominium' },
+              'Condominium'
+            )
+          ),
+          _react2.default.createElement(
+            'label',
+            { htmlFor: 'bedrooms' },
+            'Bedrooms'
+          ),
+          _react2.default.createElement(
+            'select',
+            { name: 'rooms', className: 'filters rooms', onChange: this.props.change },
+            _react2.default.createElement(
+              'option',
+              { value: '0' },
+              '0+ Bedrooms'
+            ),
+            _react2.default.createElement(
+              'option',
+              { value: '1' },
+              '1+ Bedrooms'
+            ),
+            _react2.default.createElement(
+              'option',
+              { value: '2' },
+              '2+ Bedrooms'
+            ),
+            _react2.default.createElement(
+              'option',
+              { value: '3' },
+              '3+ Bedrooms'
+            ),
+            _react2.default.createElement(
+              'option',
+              { value: '4' },
+              '4+ Bedrooms'
             )
           ),
           _react2.default.createElement(
@@ -453,7 +508,7 @@ var Listings = function (_Component) {
                     ),
                     _react2.default.createElement(
                       'div',
-                      { className: 'bedrooms' },
+                      { className: 'rooms' },
                       _react2.default.createElement(
                         'i',
                         { className: 'fa bed' },
@@ -657,8 +712,11 @@ var App = function (_Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
     _this.state = {
-      name: 'Joe',
+      name: 'JT',
       listingsData: _listingsData2.default,
+      city: 'All',
+      homeType: 'All',
+      rooms: 3,
       min_price: 0,
       max_price: 2000000,
       min_floor_space: 0,
@@ -693,8 +751,20 @@ var App = function (_Component) {
       var _this3 = this;
 
       var newData = this.state.listingsData.filter(function (item) {
-        return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorspace >= _this3.state.min_floor_space && item.floorspace <= _this3.state.max_floor_space;
+        return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorspace >= _this3.state.min_floor_space && item.floorspace <= _this3.state.max_floor_space && item.rooms >= _this3.state.rooms;
       });
+
+      if (this.state.city != 'All') {
+        newData = newData.filter(function (item) {
+          return item.city == _this3.state.city;
+        });
+      }
+
+      if (this.state.homeType != 'All') {
+        newData = newData.filter(function (item) {
+          return item.homeType == _this3.state.homeType;
+        });
+      }
 
       this.setState({
         filteredData: newData

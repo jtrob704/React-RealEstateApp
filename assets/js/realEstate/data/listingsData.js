@@ -10,7 +10,7 @@ var listingsData = [
             'elevator',
             'gym'
         ],
-        hometype: 'Condominium',
+        homeType: 'Condominium',
         image: '/img/larger.jpg'
     },
     {
@@ -25,7 +25,7 @@ var listingsData = [
             'swimming pool',
             'gym'
         ],
-        hometype: 'Condominium',
+        homeType: 'Condominium',
         image: '/img/escena-amenity-exterior-building-exterior-2_B.jpg?w=320&h=237'
     },
     {
@@ -39,7 +39,7 @@ var listingsData = [
             'swimming pool',
             'finished basement'
         ],
-        hometype: 'Single-family home',
+        homeType: 'Single-family home',
         image: '/img/brewster-mcleod-architects-1486154143.jpg?crop=1xw:1xh;center,top&resize=480:*'
     },
     {
@@ -53,7 +53,7 @@ var listingsData = [
             'finished basement',
             'gym'
         ],
-        hometype: 'Single-family home',
+        homeType: 'Single-family home',
         image: '/img/ddcf38d12e7d148a3cc0f20a189b7f68l-m0xd-w480_h480_q80.jpg'
     },
     {
@@ -68,7 +68,7 @@ var listingsData = [
             'swimming pool',
             'gym'
         ],
-        hometype: 'Townhome',
+        homeType: 'Townhome',
         image: '/img/da9501057f20f97a2594f61d382bbd51--luxury-townhomes-brick-facade.jpg'
     },
     {
@@ -81,7 +81,7 @@ var listingsData = [
         extras: [
             'finished basement'
         ],
-        hometype: 'Townhome',
+        homeType: 'Townhome',
         image: '/img/707abb9bbff253667c53d5de726f4b06l-m0xd-w480_h480_q80.jpg'
     }
 

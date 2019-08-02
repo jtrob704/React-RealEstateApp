@@ -39,7 +39,7 @@ export default class Listings extends Component {
                     <i className="fa square"><FontAwesomeIcon icon={faSquareRegular} /></i>
                     <span>{listing.floorspace} ft&sup2;</span>
                   </div>
-                  <div className="bedrooms">
+                  <div className="rooms">
                     <i className="fa bed"><FontAwesomeIcon icon={faBed} /></i>
                     <span>{listing.rooms} Bedrooms</span>
                   </div>
