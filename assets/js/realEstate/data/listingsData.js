@@ -102,7 +102,7 @@ var listingsData = [
         address: '2207  Scheuvront Drive',
         city: 'Northglenn',
         state: 'CO',
-        rooms: 0,
+        rooms: 1,
         price: 1200000,
         floorspace: 2100,
         extras: [

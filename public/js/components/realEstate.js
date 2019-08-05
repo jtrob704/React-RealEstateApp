@@ -83,7 +83,7 @@ var listingsData = [{
     address: '2207  Scheuvront Drive',
     city: 'Northglenn',
     state: 'CO',
-    rooms: 0,
+    rooms: 1,
     price: 1200000,
     floorspace: 2100,
     extras: ['elevator', 'gym', 'swimming pool'],
@@ -719,7 +719,8 @@ var Listings = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'results' },
-            '390 results found'
+            this.props.globalState.filteredData.length,
+            ' results found'
           ),
           _react2.default.createElement(
             'div',
@@ -749,7 +750,8 @@ var Listings = function (_Component) {
         _react2.default.createElement(
           'section',
           { className: 'listings-results' },
-          this.loopListings()
+          this.loopListings(),
+          _react2.default.createElement('div', { className: 'row' })
         ),
         _react2.default.createElement(
           'section',

@@ -105,33 +105,35 @@ export default class Listings extends Component {
       </section>
 
       <section className="sortby-area">
-        <div className="results">390 results found</div>
+        <div className="results">{this.props.globalState.filteredData.length} results found</div>
         <div className="sort-options">
           <select name="sortby" className="sortby" onChange={this.props.change}>
             <option value="price-dsc">Lowest Price</option>
             <option value="price-asc">Highest Price</option>
           </select>
           <div className="view">
-            <FontAwesomeIcon icon={faList} className="fa fa-th-list" onClick={this.props.changeView.bind(null, "list")}/>
-            <FontAwesomeIcon icon={faTh} className="fa fa-th" onClick={this.props.changeView.bind(null, "box")}/>
+            <FontAwesomeIcon icon={faList} className="fa fa-th-list" onClick={this.props.changeView.bind(null, "list")} />
+            <FontAwesomeIcon icon={faTh} className="fa fa-th" onClick={this.props.changeView.bind(null, "box")} />
           </div>
         </div>
       </section>
 
       <section className="listings-results">
         {this.loopListings()}
+        <div className="row"></div>
       </section>
 
       <section className="pagination">
-        <ul className="pages">
-          <li>Prev</li>
-          <li className="active">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>Next</li>
-        </ul>
+        
+          <ul className="pages">
+            <li>Prev</li>
+            <li className="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>Next</li>
+          </ul>        
       </section>
     </section>)
   }
