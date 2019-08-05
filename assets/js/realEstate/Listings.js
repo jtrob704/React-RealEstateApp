@@ -19,50 +19,89 @@ export default class Listings extends Component {
     if (listingsData == undefined || listingsData.length == 0) {
       return "Sorry, no matches found. Try expanding your search parameters."
     }
-
+    // Display box view
     return listingsData.map((listing, index) => {
-      return (<div className="col-md-3" key={index}>
-        <div className="listing">
-          <div className="listing-img" style={{ background: `url(${listing.image}) no-repeat center center` }}>
-            <span className="address">{listing.address}</span>
-            <div className="details">
-              <div className="col-md-3">
-                <div className="user-img"> </div>
-              </div>
-              <div className="col-md-9">
-                <div className="user-details">
-                  <span className="user-name">Martha Smith</span>
-                  <span className="post-date">06/30/2019</span>
+      if (this.props.globalState.view == 'box') {
+        return (<div className="col-md-3" key={index}>
+          <div className="listing">
+            <div className="listing-img" style={{ background: `url(${listing.image}) no-repeat center center` }}>
+              <span className="address">{listing.address}</span>
+              <div className="details">
+                <div className="col-md-3">
+                  <div className="user-img"> </div>
                 </div>
-                <div className="listing-details">
-                  <div className="floor-space">
-                    <i className="fa square"><FontAwesomeIcon icon={faSquareRegular} /></i>
-                    <span>{listing.floorspace} ft&sup2;</span>
+                <div className="col-md-9">
+                  <div className="user-details">
+                    <span className="user-name">Martha Smith</span>
+                    <span className="post-date">06/30/2019</span>
                   </div>
-                  <div className="rooms">
-                    <i className="fa bed"><FontAwesomeIcon icon={faBed} /></i>
-                    <span>{listing.rooms} Bedrooms</span>
+                  <div className="listing-details">
+                    <div className="floor-space">
+                      <i className="fa square"><FontAwesomeIcon icon={faSquareRegular} /></i>
+                      <span>{listing.floorspace} ft&sup2;</span>
+                    </div>
+                    <div className="rooms">
+                      <i className="fa bed"><FontAwesomeIcon icon={faBed} /></i>
+                      <span>{listing.rooms} Bedrooms</span>
+                    </div>
                   </div>
-                </div>
-                <div className="view-btn">
-                  View Listing
+                  <div className="view-btn">
+                    View Listing
             </div>
+                </div>
               </div>
+            </div>
+            <div className="bottom-info">
+              <span className="price">${listing.price}</span>
+              <span className="location"><i><FontAwesomeIcon icon={faMapMarkerAlt} /></i> {listing.city}, {listing.state} </span>
             </div>
           </div>
-          <div className="bottom-info">
-            <span className="price">${listing.price}</span>
-            <span className="location"><i><FontAwesomeIcon icon={faMapMarkerAlt} /></i> {listing.city}, {listing.state} </span>
+        </div>)
+      } else {
+        // Display the list view
+        return (<div className="col-md-12 col-lg-6" key={index}>
+          <div className="listing">
+            <div className="listing-img" style={{ background: `url(${listing.image}) no-repeat center center` }}>
+              <span className="address">{listing.address}</span>
+              <div className="details">
+                <div className="col-md-3">
+                  <div className="user-img"> </div>
+                </div>
+                <div className="col-md-9">
+                  <div className="user-details">
+                    <span className="user-name">Martha Smith</span>
+                    <span className="post-date">06/30/2019</span>
+                  </div>
+                  <div className="listing-details">
+                    <div className="floor-space">
+                      <i className="fa square"><FontAwesomeIcon icon={faSquareRegular} /></i>
+                      <span>{listing.floorspace} ft&sup2;</span>
+                    </div>
+                    <div className="rooms">
+                      <i className="fa bed"><FontAwesomeIcon icon={faBed} /></i>
+                      <span>{listing.rooms} Bedrooms</span>
+                    </div>
+                  </div>
+                  <div className="view-btn">
+                    View Listing
+            </div>
+                </div>
+              </div>
+            </div>
+            <div className="bottom-info">
+              <span className="price">${listing.price}</span>
+              <span className="location"><i><FontAwesomeIcon icon={faMapMarkerAlt} /></i> {listing.city}, {listing.state} </span>
+            </div>
           </div>
-        </div>
-      </div>)
+        </div>)
+      }
     })
   }
 
   render() {
     return (<section id="listings">
       <section className="search-area">
-        <input type="text" name="search" />
+        <input type="text" name="search" onChange={this.props.change} />
       </section>
 
       <section className="sortby-area">
@@ -73,19 +112,15 @@ export default class Listings extends Component {
             <option value="price-asc">Highest Price</option>
           </select>
           <div className="view">
-            <FontAwesomeIcon icon={faList} className="fa" />
-            <FontAwesomeIcon icon={faTh} className="fa" />
+            <FontAwesomeIcon icon={faList} className="fa fa-th-list" onClick={this.props.changeView.bind(null, "list")}/>
+            <FontAwesomeIcon icon={faTh} className="fa fa-th" onClick={this.props.changeView.bind(null, "box")}/>
           </div>
         </div>
       </section>
 
       <section className="listings-results">
-
         {this.loopListings()}
-
       </section>
-
-
 
       <section className="pagination">
         <ul className="pages">

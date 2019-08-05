@@ -83,8 +83,36 @@ var listingsData = [
         ],
         homeType: 'Townhome',
         image: '/img/707abb9bbff253667c53d5de726f4b06l-m0xd-w480_h480_q80.jpg'
+    },
+    {
+        address: '3966  Scott Street',
+        city: 'Wurtsboro',
+        state: 'NY',
+        rooms: 0,
+        price: 560000,
+        floorspace: 900,
+        extras: [
+            'gym',
+            'elevator'
+        ],
+        homeType: 'Studio',
+        image: '/img/studio_apartment.jpg'
+    },
+    {
+        address: '2207  Scheuvront Drive',
+        city: 'Northglenn',
+        state: 'CO',
+        rooms: 0,
+        price: 1200000,
+        floorspace: 2100,
+        extras: [
+            'elevator',
+            'gym',
+            'swimming pool'
+        ],
+        homeType: 'Studio',
+        image: '/img/1_br_condo.jpg'
     }
-
 ]
 
 export default listingsData;

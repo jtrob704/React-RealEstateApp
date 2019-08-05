@@ -1,12 +1,12 @@
-@import url( 'https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,500,700');
-@import "variables"; //import color palette variables
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,500,700');
 @import "reset";
-
+@import "variables"; //import color palette variables
+@import "grid";
 
 *,
 body,
 html {
-  font-family: 'Open+Sans', sans-serif;  
+  font-family: 'Open+Sans', sans-serif;
   box-sizing: border-box;
 }
 

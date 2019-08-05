@@ -24,12 +24,15 @@ class App extends Component {
       swimming_pool: false,
       filteredData: listingsData,
       populateFormData: '',
-      sortby: 'price-dsc'
+      sortby: 'price-dsc',
+      view: 'box',
+      search: ''
     }
 
     this.change = this.change.bind(this)
     this.filteredData = this.filteredData.bind(this)
     this.populateForm = this.populateForm.bind(this)
+    this.changeView = this.changeView.bind(this)
   }
 
   componentWillMount() {
@@ -50,6 +53,12 @@ class App extends Component {
     }, () => {
       console.log(this.state)
       this.filteredData()
+    })
+  }
+
+  changeView(viewName) {
+    this.setState({
+      view: viewName
     })
   }
 
@@ -81,6 +90,19 @@ class App extends Component {
     if (this.state.sortby == 'price-asc') {
       newData = newData.sort((a, b) => {
         return b.price - a.price
+      })
+    }
+
+    if (this.state.search != '') {
+      newData = newData.filter((item) => {
+        var city = item.city.toLowerCase()
+        var searchText = this.state.search.toLowerCase()
+        var n = city.match(searchText)
+
+        if (n != null) {
+          return true
+        }
+
       })
     }
 
@@ -130,7 +152,7 @@ class App extends Component {
       <Header />
       <section id="content-area">
         <Filter change={this.change} globalState={this.state} populateAction={this.populateForm} />
-        <Listings listingsData={this.state.filteredData} change={this.change} />
+        <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView} />
       </section>
     </div>)
   }
