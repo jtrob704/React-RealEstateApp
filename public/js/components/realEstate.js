@@ -277,7 +277,7 @@ var Filter = function (_Component) {
               _react2.default.createElement(
                 'span',
                 null,
-                'Elevators'
+                'Elevator'
               ),
               _react2.default.createElement('input', { type: 'checkbox', name: 'elevator', value: 'elevator', onChange: this.props.change })
             ),
@@ -926,6 +926,30 @@ var App = function (_Component) {
       var newData = this.state.listingsData.filter(function (item) {
         return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorspace >= _this3.state.min_floor_space && item.floorspace <= _this3.state.max_floor_space && item.rooms >= _this3.state.rooms;
       });
+
+      if (this.state.elevator) {
+        newData = newData.filter(function (item) {
+          return item.extras.includes('elevator') == _this3.state.elevator;
+        });
+      }
+
+      if (this.state.swimming_pool) {
+        newData = newData.filter(function (item) {
+          return item.extras.includes('swimming pool') == _this3.state.swimming_pool;
+        });
+      }
+
+      if (this.state.finished_basement) {
+        newData = newData.filter(function (item) {
+          return item.extras.includes('finished basement') == _this3.state.finished_basement;
+        });
+      }
+
+      if (this.state.gym) {
+        newData = newData.filter(function (item) {
+          return item.extras.includes('gym') == _this3.state.gym;
+        });
+      }
 
       if (this.state.city != 'All') {
         newData = newData.filter(function (item) {

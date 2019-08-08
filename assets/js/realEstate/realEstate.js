@@ -69,6 +69,30 @@ class App extends Component {
         item.rooms >= this.state.rooms
     })
 
+    if (this.state.elevator) {
+      newData = newData.filter((item) => {
+        return item.extras.includes('elevator') == this.state.elevator
+      })
+    }
+
+    if (this.state.swimming_pool) {
+      newData = newData.filter((item) => {
+        return item.extras.includes('swimming pool') == this.state.swimming_pool
+      })
+    }
+
+    if (this.state.finished_basement) {
+      newData = newData.filter((item) => {
+        return item.extras.includes('finished basement') == this.state.finished_basement
+      })
+    }
+
+    if (this.state.gym) {
+      newData = newData.filter((item) => {
+        return item.extras.includes('gym') == this.state.gym
+      })
+    }
+
     if (this.state.city != 'All') {
       newData = newData.filter((item) => {
         return item.city == this.state.city
